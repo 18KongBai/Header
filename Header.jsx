@@ -2,12 +2,10 @@
 // 初始化
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './head.css';
-import backImg from '../../assets/images/back.png';
+import backImg from './images/back.png';
 
 const Header = (props) => {
-  const {
-    rightChild, backFunc, title, scroll = false, children, leftChild,
-  } = props;
+  const { rightChild, backFunc, title, scroll = false, children, leftChild } = props;
 
   // 透明度
   const [opacity, setOpacity] = useState(0);
@@ -66,7 +64,7 @@ const Header = (props) => {
     <div className={styles.container}>
       <div className={styles.headerBox} style={getStyle()}>
         <div className={styles.left}>
-          {leftChild || <img src={backImg} alt="" onClick={handleBack} />}
+          {leftChild || <img src={backImg} alt='' onClick={handleBack} />}
         </div>
         <div className={styles.center}>{title}</div>
         <div className={styles.right}>{rightChild || ''}</div>
