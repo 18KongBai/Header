@@ -1,0 +1,65 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+
+.headerBox {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: content-box;
+	width: 100%;
+	height: calc(98 / 32 * 1rem);
+	padding-top: calc(40 / 32 * 1rem);
+	padding-top: constant(safe-area-inset-top, calc(40 / 32 * 1rem));
+	padding-top: env(safe-area-inset-top, calc(40 / 32 * 1rem));
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	order: 1;
+	width: fit-content;
+	min-width: calc(100 / 32 * 1rem);
+	height: 100%;
+}
+
+.left img {
+	width: calc(18 / 32 * 1rem);
+	height: calc(26 / 32 * 1rem);
+}
+
+.center {
+	order: 2; /* 确保居中元素始终在中间 */
+	overflow: hidden;
+	max-width: calc(500 / 32 * 1rem);
+	margin: 0 auto;
+	padding: 10px;
+	font-size: calc(36 / 32 * 1rem);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	order: 3;
+	width: fit-content;
+	min-width: calc(100 / 32 * 1rem);
+	height: 100%;
+}
+
+.content {
+	flex: 1;
+	overflow: scroll;
+	width: 100%;
+}
